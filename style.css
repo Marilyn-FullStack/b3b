@@ -1,0 +1,467 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --cor01: #000;
+    --cor02: #A6032F;
+    --cor03: #D9B13B;
+    --cor04: #03658C;
+    --cor05: #035AA6;
+    --cor06: #64B0CE;
+    --cor07: #fff;
+}
+
+/* style index.html */
+body {
+    font-size: 16px;
+    text-shadow: 1px 1px 3px var(--cor07);
+    line-height: 1.6;
+    color: var(--cor07);
+    background-color: var(--cor07);
+}
+
+/* Estilo para a barra de navegação */
+nav {
+    background: linear-gradient(to right, var(--cor05), var(--cor07));
+    box-shadow: 0 0 5px var(--cor01);
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para os itens de menu */
+#menu li {
+    display: inline-block;
+    /* Alinhar itens na mesma linha */
+    margin-right: 20px;
+    /* Espaçamento entre os itens de menu */
+    color: var(--cor07);
+}
+
+/* Estilo para os links no menu */
+#menu a {
+    text-shadow: 1px 1px 3px var(--cor03);
+    color: var(--cor07);
+    /* Cor do texto nos links */
+    font-weight: bold;
+    /* Negrito no texto dos links */
+    font-size: 16px;
+    /* Tamanho do texto nos links */
+    padding: 15px;
+    /* Espaçamento interno nos links */
+    border-radius: 5px;
+    /* Cantos arredondados nos links */
+    transition: background-color 0.3s ease;
+    /* Transição suave da cor de fundo */
+}
+
+/* Estilo para os links no menu ao passar o mouse */
+#menu a:hover {
+    background-color: var(--cor03);
+    /* Cor de fundo ao passar o mouse */
+    color: var(--cor02);
+    /* Cor do texto ao passar o mouse */
+    text-shadow: 1px 1px 3px var(--cor07);
+    filter: opacity(0.7);
+}
+
+/* Estilos para elementos h1 */
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: var(--cor04);
+    margin: 20px 0;
+    /* Ajuste da margem para cima e para baixo */
+    padding: 20px;
+    text-shadow: 2px 2px 4px var(--cor06);
+}
+
+/* Estilos para elementos h1 */
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--cor04);
+    margin: 5px;
+    /* Ajuste da margem para cima e para baixo */
+    padding: 10px;
+    text-shadow: 2px 2px 4px var(--cor06);
+}
+
+/* Efeito ao passar o mouse na imagem */
+img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 49%;
+    border: 5px double var(--cor02);
+    /* Adiciona uma borda sutil */
+    margin: 0 auto;
+    transition: transform 3.3s ease, filter 1.5s ease;
+    /* Adiciona transições suaves */
+}
+
+img:hover {
+    transform: scale(1.1) rotate(10deg);
+    /* Aumenta a escala e rotaciona */
+    box-shadow: 0 0 20px var(--cor02);
+    /* Aumentando a sombra ao passar o mouse */
+    opacity: 0.9;
+    /* Reduzindo a opacidade para um efeito mais suave */
+}
+
+
+/* Estilo para parágrafos */
+p {
+    color: var(--cor05);
+    text-shadow: 1px 1px 3px var(--cor04);
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+/* Adicionando as propriedades do iframe*/
+iframe[data-src] {
+    transition: opacity 0.3s ease;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+iframe[data-src].lazy-loaded {
+    opacity: 1;
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border: solid var(--cor02);
+    box-shadow: 0 0 20px var(--cor02);
+    display: block;
+    margin: auto;
+    margin-bottom: 150px;
+}
+
+#contato {
+    padding: 40px;
+    text-align: center;
+
+}
+
+/* style contato.html */
+
+#form-container {
+    max-width: 600px;
+    margin: 100px auto 5%;
+    /* Margem na parte inferior como porcentagem da largura */
+    padding: 4%;
+    border: 1px solid var(--cor09);
+    border-radius: 10px;
+    box-shadow: 0 0 2vw var(--cor01);
+    /* Unidade de viewport para sombra */
+    background-color: var(--cor06);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+    transition: color 0.3s ease-in-out;
+    text-shadow: 1px 1px 2px var(--cor03);
+    background: linear-gradient(to right, var(--cor02), var(--cor03), var(--cor04));
+    color: var(--cor06);
+}
+
+label:hover {
+    background-color: var(--cor06);
+    padding: 10px;
+}
+
+
+label:before {
+    content: "\2022";
+    /* Código do caractere de ponto (•) */
+    margin-right: 5px;
+    color: var(--cor10);
+}
+
+input,
+textarea {
+    width: calc(100% - 20px);
+    /* Considerando o padding de 10px em cada lado */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px var(--cor01);
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 20px var(--cor02);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--cor09);
+}
+
+button {
+    display: block;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px var(--cor03);
+    border-radius: 15px;
+    border: 2px solid var(--cor04);
+    background: linear-gradient(to right, var(--cor02), var(--cor03), var(--cor04));
+    color: var(--cor06);
+    box-shadow: 0 0 20px var(--cor02);
+    cursor: pointer;
+    transition: transform 3.3s ease;
+}
+
+button:before {
+    content: "\2022";
+    /* Código do caractere de ponto (•) */
+    margin-right: 5px;
+    color: var(--cor10);
+}
+
+button:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    background: linear-gradient(to right, var(--cor04), var(--cor03), var(--cor02));
+}
+
+/* style servico.html */
+
+#servicos {
+    max-width: 800px;
+    margin: 30px auto;
+    margin-bottom: 100px;
+}
+
+#servicos div p {
+    color: var(--cor05);
+    text-shadow: 1px 1px 3px var(--cor04);
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#servicos li {
+    border-radius: 8px;
+    box-shadow: 0 0 20px var(--cor02);
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+aside {
+    font-size: 10px;
+}
+
+footer {
+    background: linear-gradient(to right, var(--cor05), var(--cor07));
+    color: var(--cor07);
+    box-shadow: 0 0 5px var(--cor01);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para dispositivos móveis) */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        height: 30px;
+        /* Ajuste da altura da barra de navegação para dispositivos menores */
+        padding: 5px 0;
+        /* Ajuste do espaçamento interno da barra de navegação para dispositivos menores */
+
+    }
+
+    /* Ajuste para dispositivos móveis no menu */
+    #menu li {
+        margin-right: 0;
+        /* Remove o espaçamento entre os itens do menu */
+        margin-bottom: 5px;
+        /* Adiciona um espaçamento inferior entre os itens do menu */
+    }
+
+    /* Ajuste para dispositivos móveis na classe .center */
+    .center {
+        margin: 10px 0;
+        /* Ajuste da margem para dispositivos móveis */
+        padding: 10px;
+        /* Ajuste do espaçamento interno para dispositivos móveis */
+        font-size: 18px;
+        /* Ajuste do tamanho da fonte para dispositivos móveis */
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    iframe {
+        max-width: 100%;
+        /* Largura máxima para dispositivos móveis */
+        min-width: 300px;
+        /* Largura mínima para essa faixa de tamanhos de tela */
+    }
+
+    /* style contato.html */
+    #form-container {
+        margin: 5% auto;
+        /* Ajuste a margem para dispositivos móveis */
+        padding: 8%;
+    }
+
+    #form-container h1 {
+        margin: 5% 0;
+        padding: 5%;
+    }
+
+    label {
+        font-size: 1em;
+        /* Ajuste o tamanho da fonte para dispositivos menores */
+        padding: 8px;
+        /* Ajuste do espaçamento interno para dispositivos menores */
+    }
+
+    label:hover {
+        background-color: transparent;
+        /* Remova a cor de fundo ao passar o mouse em dispositivos menores */
+        padding: 8px;
+    }
+
+    input,
+    textarea {
+        font-size: 1em;
+        /* Ajuste o tamanho da fonte para dispositivos menores */
+        padding: 8px;
+        /* Ajuste do espaçamento interno para dispositivos menores */
+        box-shadow: 2px 2px 5px var(--cor01);
+    }
+
+    input:focus,
+    textarea:focus {
+        box-shadow: 0 0 3px var(--cor07);
+    }
+
+    button {
+        padding: 12px 16px;
+        /* Ajuste do padding para dispositivos menores */
+        font-size: 14px;
+        /* Ajuste do tamanho da fonte para dispositivos menores */
+    }
+}
+
+/* Estilos adicionais para dispositivos com telas grandes*/
+@media screen and (min-width: 1207px) {
+
+    nav {
+        height: 40px;
+        /* Ajustar a altura da barra de navegação para telas grandes */
+        padding: 10px 0;
+        /* Ajustar o espaçamento interno da barra de navegação para telas grandes */
+    }
+
+    /* Ajuste específico para dispositivos grandes no menu */
+    #menu li {
+        margin-right: 50px;
+        /* Adiciona um espaçamento entre os itens do menu */
+        margin-bottom: 25px;
+        /* Adiciona um espaçamento inferior entre os itens do menu */
+    }
+
+    /* Ajuste para dispositivos grandes na classe .center */
+    .center {
+        margin: 30px 0;
+        /* Ajuste da margem para dispositivos grandes */
+        padding: 30px;
+        /* Ajuste do espaçamento interno para dispositivos grandes */
+        font-size: 24px;
+        /* Ajuste do tamanho da fonte para dispositivos grandes */
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    /* Ajuste para parágrafos em dispositivos grandes */
+    p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        max-width: 800px;
+        /* Largura máxima para telas grandes */
+    }
+
+    /* style contato.html */
+    #form-container {
+        margin: 2% auto;
+        /* Ajuste a margem para telas grandes */
+        padding: 2%;
+    }
+
+    #form-container h1 {
+        margin: 2% 0;
+        padding: 2%;
+    }
+
+    label {
+        font-size: 1.5em;
+        /* Ajuste o tamanho da fonte para telas grandes */
+        padding: 15px;
+        /* Ajuste do espaçamento interno para telas grandes */
+    }
+
+    label:hover {
+        background-color: var(--cor06);
+        padding: 15px;
+    }
+
+    input,
+    textarea {
+        font-size: 1.2em;
+        /* Ajuste o tamanho da fonte para telas grandes, se necessário */
+        padding: 12px;
+        /* Ajuste do espaçamento interno para telas grandes */
+    }
+
+    input:focus,
+    textarea:focus {
+        box-shadow: 0 0 7px var(--cor07);
+    }
+
+    button {
+        padding: 18px 24px;
+        /* Ajuste do padding para telas grandes */
+        font-size: 18px;
+        /* Ajuste do tamanho da fonte para telas grandes */
+    }
+}
