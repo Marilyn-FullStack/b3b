@@ -29,6 +29,38 @@ body {
     background-color: var(--cor07);
 }
 
+#brands-box {
+    width: auto;
+    height: auto;
+    margin: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Adicionado para lidar com quebra de linha em ícones menores */
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-brands {
+    margin: 10px;
+    border-radius: 50%; /* Alterado para tornar os ícones redondos */
+    color: var(--cor04);
+    padding: 15px; /* Aumentado o tamanho do padding para melhorar a aparência */
+    font-size: 50px; /* Definido um tamanho de fonte fixo para garantir consistência */
+    transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+
+.fa-brands:hover,
+.fa-brands:active { /* Para lidar com o clique do mouse */
+    color: var(--cor05);
+    box-shadow: 0 0 10px var(--cor06); /* sombreamento suave */
+    transform: scale(1.2);
+    background: var(--cor06);
+}
+
+.fa-brands:active {
+    transition: color 0.1s, box-shadow 0.1s, transform 0.1s; /* Para uma transição mais rápida durante o clique */
+}
+
 /* Estilo para a barra de navegação */
 nav {
     background: linear-gradient(to right, var(--cor05), var(--cor07));
@@ -165,7 +197,7 @@ iframe {
     max-width: 600px;
     margin: 100px auto 5%;
     /* Margem na parte inferior como porcentagem da largura */
-    padding: 4%;
+    padding: 2%;
     border: 1px solid var(--cor09);
     border-radius: 10px;
     box-shadow: 0 0 2vw var(--cor01);
@@ -175,12 +207,14 @@ iframe {
 
 label {
     display: block;
-    margin-bottom: 10px;
+    margin: 20px 0 20px 0;
     font-size: 1.2em;
     font-weight: bold;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--cor04);
     transition: color 0.3s ease-in-out;
+    box-shadow: 0 0 20px var(--cor02);
     text-shadow: 1px 1px 2px var(--cor03);
     background: linear-gradient(to right, var(--cor02), var(--cor03), var(--cor04));
     color: var(--cor06);
@@ -206,6 +240,7 @@ textarea {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    border: 2px solid var(--cor04);
     font-size: 1.1em;
     font-weight: bold;
     transition: box-shadow 0.3s ease-in-out;
@@ -215,6 +250,7 @@ textarea {
 input:focus,
 textarea:focus {
     box-shadow: 0 0 20px var(--cor02);
+    border: 2px solid var(--cor04);
 }
 
 input::placeholder,
@@ -224,13 +260,15 @@ textarea::placeholder {
 
 button {
     display: block;
+    margin: 0 auto; /* Adiciona margem automática para centralizar */
+    width: 300px;  /* Define a largura desejada */
     padding: 15px 20px;
     font-size: 16px;
     text-shadow: 1px 1px 2px var(--cor03);
     border-radius: 15px;
     border: 2px solid var(--cor04);
     background: linear-gradient(to right, var(--cor02), var(--cor03), var(--cor04));
-    color: var(--cor06);
+    color: var(--cor05);
     box-shadow: 0 0 20px var(--cor02);
     cursor: pointer;
     transition: transform 3.3s ease;
